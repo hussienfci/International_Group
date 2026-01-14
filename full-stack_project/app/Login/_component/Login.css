@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+@import url("https://use.fontawesome.com/releases/v6.5.1/css/all.css");
+
+
+    
+.box {
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    overflow: hidden;
+    position: relative;
+    width: 1500px;
+    height: 800px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    transform: translateY(-50px);
+    animation: slideIn 0.8s ease forwards, glowEffect 3s infinite alternate;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(-50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes glowEffect {
+  from { box-shadow: 0 0 15px rgba(255, 255, 255, 0.2); }
+  to { box-shadow: 0 0 40px rgba(69, 243, 255, 0.9); }
+}
+
+.login {
+  position: absolute;
+  inset: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.header2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  overflow: hidden;
+}
+
+.innerSpan {
+  display: inline-block;
+  animation: wave 1.5s infinite;
+}
+
+@keyframes wave {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.InnerInput {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 10px 0;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  outline: none;
+  transition: 0.4s;
+}
+
+.InnerInput:focus {
+  border-color: #45f3ff;
+  box-shadow: 0 0 10px #45f3ff, 0 0 20px #45f3ff;
+  transform: scale(1.05);
+}
+
+.InnerInput[type="submit"] {
+  background: #45f3ff;
+  cursor: pointer;
+  transition: 0.5s;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.InnerInput[type="submit"]:hover {
+  background: #36c1e1;
+  box-shadow: 0 0 20px #45f3ff, 0 0 60px #45f3ff;
+  transform: scale(1.1);
+}
+
+.btnsDiv {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#groupAnchor {
+  color: #45f3ff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+#groupAnchor:hover {
+  color: #36c1e1;
+  text-decoration: underline;
+}
